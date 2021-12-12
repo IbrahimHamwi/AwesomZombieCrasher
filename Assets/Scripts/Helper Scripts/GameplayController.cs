@@ -41,18 +41,20 @@ public class GameplayController : MonoBehaviour
 
         CreateObstacles(playerController.gameObject.transform.position.z + halfGroundSize);
 
-        StartCoroutine("GenerateObstacles");
+        StartCoroutine(GenerateObstacles());
     }
     void CreateObstacles(float zPos)
     {
-        int r = Random.Range(0, 10);
+        int r = Random.Range(0, 100);
 
-        if (0 <= r && r < 7)
+        if (r < 67)
         {
             int obstacleLane = Random.Range(0, lanes.Length);
 
-            AddObstacles(new Vector3(lanes[obstacleLane].transform.position.x, 9f, zPos),
-             Random.Range(0, obstaclePrefabs.Length));
+            Vector3 position = new Vector3(lanes[obstacleLane].transform.position.x, 0f, zPos);
+            int type = Random.Range(0, obstaclePrefabs.Length);
+            AddObstacles(position,
+             type);
 
             int zombieLane = 0;
 

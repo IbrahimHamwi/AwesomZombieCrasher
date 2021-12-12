@@ -86,7 +86,7 @@ public class PlayerController : BaseController
     }
     public void ShootingControl()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             GameObject bullet = Instantiate(bullet_Prefab, bullet_StartPoint.position, Quaternion.identity);
             bullet.GetComponent<BulletScript>().Move(2000f);
