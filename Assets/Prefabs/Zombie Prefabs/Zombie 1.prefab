@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7348669134109832243}
   - component: {fileID: 335359779079077877}
   - component: {fileID: 1119399836812761622}
+  - component: {fileID: 3813954450738055741}
   m_Layer: 0
   m_Name: Zombie 1
   m_TagString: Untagged
@@ -60,8 +61,22 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 96
   m_CollisionDetection: 0
+--- !u!114 &3813954450738055741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693105443546276514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e24ef4e306834e43ac33ef07c124873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodFXPrefab: {fileID: 1690365919121730, guid: 01905950d6bb84877a984f64b83d6c2d, type: 3}
+  speed: 1
 --- !u!1001 &4546981060899080681
 PrefabInstance:
   m_ObjectHideFlags: 0

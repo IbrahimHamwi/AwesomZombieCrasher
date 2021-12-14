@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 0e34577da2edb034e85996d04164266e, type: 3}
       propertyPath: m_Name
-      value: Truck 2
+      value: Truck 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 0e34577da2edb034e85996d04164266e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e34577da2edb034e85996d04164266e, type: 3}
       propertyPath: m_RootOrder
@@ -69,3 +73,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e34577da2edb034e85996d04164266e, type: 3}
+--- !u!1 &7386029833621687524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 0e34577da2edb034e85996d04164266e, type: 3}
+  m_PrefabInstance: {fileID: 7386029833621654080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4669057746358041657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386029833621687524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e081970a0a0ecb498b2abdf8db33a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosioPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678, type: 3}
+  damage: 20
+--- !u!65 &-8607180458347862180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386029833621687524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.422969, y: 4.3932605, z: 10.811963}
+  m_Center: {x: 0, y: 2.1966302, z: 0.00000023841856}
