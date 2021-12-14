@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameplayController : MonoBehaviour
 {
@@ -11,6 +13,13 @@ public class GameplayController : MonoBehaviour
     public Transform[] lanes;
     public float min_ObstacleDelay = 10f, max_ObstacleDelay = 40f, halfGroundSize;
     private BaseController playerController;
+
+    private Text score_Text;
+    private int ZombieKillCount;
+
+    [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject gameoverPanel;
+    [SerializeField] private Text finalScore;
     void Awake()
     {
         MakeInstance();
@@ -21,6 +30,8 @@ public class GameplayController : MonoBehaviour
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseController>();
 
         StartCoroutine(GenerateObstacles());
+
+        score_Text = GameObject.Find("ScoreText").GetComponent<Text>();
     }
 
     void MakeInstance()
@@ -103,5 +114,36 @@ public class GameplayController : MonoBehaviour
             Vector3 shift = new Vector3(Random.Range(-0.5f, 0.5f), 0f, Random.Range(1f, 10f) * i);
             Instantiate(zombiePrefabs[Random.Range(0, zombiePrefabs.Length)], pos + shift * i, Quaternion.identity);
         }
+    }
+    public void IncreaseScore()
+    {
+        ZombieKillCount++;
+        score_Text.text = ZombieKillCount.ToString();
+    }
+    public void PauseGame()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    public void ResumeGame()
+    {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+    public void ExitGame()
+    {
+        // Time.timeScale = 1f;
+        // SceneManager.LoadScene("MainMenu");
+    }
+    public void Gameover()
+    {
+        Time.timeScale = 0f;
+        gameoverPanel.SetActive(true);
+        finalScore.text = "Killed" + ZombieKillCount;
+    }
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Gameplay");
     }
 }

@@ -7,7 +7,7 @@ public class DestroyAfterTime : MonoBehaviour
     public float timer = 3f;
     void Start()
     {
-        Invoke("DeactivateGameObject", timer);
+        Invoke("DeactiveGameObject", timer);
     }
     void DeactiveGameObject()
     {

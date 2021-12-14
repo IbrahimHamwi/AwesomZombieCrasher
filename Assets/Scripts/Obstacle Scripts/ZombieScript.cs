@@ -13,10 +13,10 @@ public class ZombieScript : MonoBehaviour
     void Start()
     {
         myBody = GetComponent<Rigidbody>();
-        speed = Random.Range(1f, 5f);
+        speed = Random.Range(1f, speed);
         isAlive = true;
     }
-    void Update()
+    void FixedUpdate()
     {
         if (isAlive)
         {
@@ -52,6 +52,7 @@ public class ZombieScript : MonoBehaviour
 
             Invoke("DeactivateGameObject", 3f);
             //IncreaseScore
+            GameplayController.instance.IncreaseScore();
 
             Die();
         }

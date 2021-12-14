@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 455788}
   - component: {fileID: 3355788}
   - component: {fileID: 2355788}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: rock_grey_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6555788}
   - component: {fileID: 8297380}
   - component: {fileID: 2789823573114295631}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Rocks
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155790}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8, y: 2, z: 1.7}
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosioPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678, type: 3}
-  damage: 20
+  damage: 5
 --- !u!1 &155792
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 455792}
   - component: {fileID: 3355790}
   - component: {fileID: 2355790}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: rock_grey_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 455794}
   - component: {fileID: 3355792}
   - component: {fileID: 2355792}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: rock_grey_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
