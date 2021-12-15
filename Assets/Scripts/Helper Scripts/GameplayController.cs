@@ -20,6 +20,7 @@ public class GameplayController : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject gameoverPanel;
     [SerializeField] private Text finalScore;
+    public GameObject ShootButton;
     public void Awake()
     {
         MakeInstance();
@@ -124,11 +125,14 @@ public class GameplayController : MonoBehaviour
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
+        ShootButton.SetActive(false);
     }
     public void ResumeGame()
     {
+        print("ResumeGame");
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
+        ShootButton.SetActive(true);
     }
     public void ExitGame()
     {
@@ -140,6 +144,7 @@ public class GameplayController : MonoBehaviour
         Time.timeScale = 0f;
         gameoverPanel.SetActive(true);
         finalScore.text = "Killed" + ZombieKillCount;
+        ShootButton.SetActive(false);
     }
     public void Restart()
     {
