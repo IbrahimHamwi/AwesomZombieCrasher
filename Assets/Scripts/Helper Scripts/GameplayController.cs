@@ -20,7 +20,7 @@ public class GameplayController : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject gameoverPanel;
     [SerializeField] private Text finalScore;
-    void Awake()
+    public void Awake()
     {
         MakeInstance();
     }
@@ -36,7 +36,7 @@ public class GameplayController : MonoBehaviour
 
     void MakeInstance()
     {
-        if (instance = null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -132,8 +132,8 @@ public class GameplayController : MonoBehaviour
     }
     public void ExitGame()
     {
-        // Time.timeScale = 1f;
-        // SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
     public void Gameover()
     {
